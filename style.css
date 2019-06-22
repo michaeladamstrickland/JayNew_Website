@@ -1,0 +1,551 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:400);
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200);
+.mastercard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  min-height: 500px;
+  background-color: #1d1d1b;
+  color: #f5f2ed;
+}
+.socialMedia {
+    position: fixed;
+    z-index: 5;
+    padding: 40px 80px;
+    margin-top: 100px;
+ 
+}
+
+.SM_title > a {
+display: block;
+padding: 10px;
+}
+
+
+a {
+  color: #f5f2ed;
+  text-decoration: none;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #f5f2ed;
+  padding: 8px 30px;
+}
+
+/* .mastercard__part {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.mastercard__part.red {
+  background-color: #e40019;
+  transform: translateX(4.1666666667px);
+}
+.mastercard__part.orange {
+  will-change: transform;
+  background-color: #f6a749;
+  transform: translateX(-4.1666666667px);
+  mix-blend-mode: color-dodge;
+} */
+
+/*  */
+.mastercard__part {
+    width: 30px;
+    height: 30px;
+    border-radius: 10%;
+    color: #1d1d1b;
+  }
+  .mastercard__part.red {
+    background-color: #e40019;
+    transform: translateX(4.1666666667px);
+  }
+  .mastercard__part.orange {
+    will-change: transform;
+    background-color: #19ee8b;
+    transform: translateX(-4.1666666667px);
+    mix-blend-mode: color-dodge;
+  }
+
+.titleHead {
+    font-family: 'Aguafina Script', cursive;
+    font-size: 45px;
+}
+.mastercard__copy {
+  overflow: hidden;
+  padding-left: 0.2em;
+}
+.mastercard__copy .letter {
+  opacity: 0;
+  transform: translateY(40%);
+}
+.mastercard__copy span {
+  display: inline-block;
+}
+
+.header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+
+.header__logo {
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+}
+
+.nav {
+  margin-left: auto;
+  font-size: 1em;
+  float: right;
+  margin-top: 25px;
+  margin-right: 25px;
+}
+
+.nav__item {
+  margin-left: 40px;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.05em;
+}
+
+.hero__cover {
+  will-change: background-position;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-clip-path: circle(0 at 0 0);
+}
+
+.hero__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-size: cover;
+  background-position: -50px bottom;
+  transition: background-position 2s cubic-bezier(0.52, 0.01, 0.16, 1);
+}
+
+.hero__strap {
+  position: relative;
+  z-index: 5;
+  padding: 40px 80px;
+}
+
+.hero__title {
+  font-weight: 100;
+  margin: 0;
+  font-size: 4em;
+}
+.hero__title > span {
+  display: block;
+}
+.hero__title .letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(40%);
+}
+.hero__title .hero__subtitle {
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+.slider {
+    max-width: 600px;
+    height: 400px;
+    margin: 20px auto;
+    position: relative;
+  }
+  .slide1,.slide2,.slide3,.slide4,.slide5,.slide6,.slide7,.slide8,.slide9 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .slide1 {
+    background: url(https://cdn.pixabay.com/photo/2016/10/28/07/04/evening-1777352__340.jpg)no-repeat center;
+        background-size: cover;
+      animation:fade 28s infinite;
+  -webkit-animation:fade 28s infinite;
+  
+  } 
+  .slide2 {
+    background: url(https://cdn.pixabay.com/photo/2016/11/29/04/54/photographer-1867417__340.jpg)no-repeat center;
+        background-size: cover;
+      animation:fade2 28s infinite;
+  -webkit-animation:fade2 28s infinite;
+  }
+  .slide3 {
+      background: url(https://cdn.pixabay.com/photo/2019/04/12/21/32/camera-4123304__340.jpg)no-repeat center;
+        background-size: cover;
+      animation:fade3 28s infinite;
+  -webkit-animation:fade3 28s infinite;
+  }
+  .slide4 {
+    background: url(https://cdn.pixabay.com/photo/2014/05/21/15/35/photographer-349871__340.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade4 28s infinite;
+-webkit-animation:fade4 28s infinite;
+}
+.slide5 {
+    background: url(https://cdn.pixabay.com/photo/2015/03/26/09/43/lenses-690179__340.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade5 28s infinite;
+-webkit-animation:fade5 28s infinite;
+}
+.slide6 {
+    background: url(https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947__340.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade6 28s infinite;
+-webkit-animation:fade6 28s infinite;
+}
+.slide7 {
+    background: url(https://cdn.pixabay.com/photo/2014/11/14/21/24/young-girl-531252__340.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade7 28s infinite;
+-webkit-animation:fade7 28s infinite;
+}
+.slide8 {
+    background: url(https://cdn.pixabay.com/photo/2016/01/19/17/48/woman-1149911__340.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade8 28s infinite;
+-webkit-animation:fade8 28s infinite;
+}
+.slide9 {
+    background: url(https://cdn.pixabay.com/photo/2018/01/21/14/16/woman-3096664__340.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade9 28s infinite;
+-webkit-animation:fade9 28s infinite;
+}
+
+  @keyframes fade
+  {
+    0%   {opacity:1}
+    11.111% { opacity: 0}
+    22.222% { opacity: 0}
+    33.333% { opacity: 0}
+    44.444% { opacity: 0}
+    55.555% { opacity: 0}
+    66.666% { opacity: 0}
+    77.777% { opacity: 0}
+    88.888% { opacity: 0}
+    100% { opacity: 1}
+  }
+  @keyframes fade2
+  {
+    0%   {opacity:0}
+    11.111% { opacity: 1}
+    22.222% { opacity: 0}
+    33.333% { opacity: 0}
+    44.444% { opacity: 0}
+    55.555% { opacity: 0}
+    66.666% { opacity: 0}
+    77.777% { opacity: 0}
+    88.888% { opacity: 0}
+    100% { opacity: 0}
+  }
+  @keyframes fade3
+  {
+    0%   {opacity:0}
+    11.111% { opacity: 0}
+    22.222% { opacity: 1}
+    33.333% { opacity: 0}
+    44.444% { opacity: 0}
+    55.555% { opacity: 0}
+    66.666% { opacity: 0}
+    77.777% { opacity: 0}
+    88.888% { opacity: 0}
+    100% { opacity: 0}
+  }
+  @keyframes fade4
+  {
+    0%   {opacity:0}
+    11.111% { opacity: 0}
+    22.222% { opacity: 0}
+    33.333% { opacity: 1}
+    44.444% { opacity: 0}
+    55.555% { opacity: 0}
+    66.666% { opacity: 0}
+    77.777% { opacity: 0}
+    88.888% { opacity: 0}
+    100% { opacity: 0}
+  }
+  @keyframes fade5
+  {
+    0%   {opacity:0}
+    11.111% { opacity: 0}
+    22.222% { opacity: 0}
+    33.333% { opacity: 0}
+    44.444% { opacity: 1}
+    55.555% { opacity: 0}
+    66.666% { opacity: 0}
+    77.777% { opacity: 0}
+    88.888% { opacity: 0}
+    100% { opacity: 0}
+  }
+  @keyframes fade6
+  {
+    0%   {opacity:0}
+    11.111% { opacity: 0}
+    22.222% { opacity: 0}
+    33.333% { opacity: 0}
+    44.444% { opacity: 0}
+    55.555% { opacity: 1}
+    66.666% { opacity: 0}
+    77.777% { opacity: 0}
+    88.888% { opacity: 0}
+    100% { opacity: 0}
+  }
+  @keyframes fade7
+  {
+    0%   {opacity:0}
+    11.111% { opacity: 0}
+    22.222% { opacity: 0}
+    33.333% { opacity: 0}
+    44.444% { opacity: 0}
+    55.555% { opacity: 0}
+    66.666% { opacity: 1}
+    77.777% { opacity: 0}
+    88.888% { opacity: 0}
+    100% { opacity: 0}
+  }
+  @keyframes fade8
+  {
+    0%   {opacity:0}
+    11.111% { opacity: 0}
+    22.222% { opacity: 0}
+    33.333% { opacity: 0}
+    44.444% { opacity: 0}
+    55.555% { opacity: 0}
+    66.666% { opacity: 0}
+    77.777% { opacity: 1}
+    88.888% { opacity: 0}
+    100% { opacity: 0}
+  }
+  @keyframes fade9
+  {
+    0%   {opacity:0}
+    11.111% { opacity: 0}
+    22.222% { opacity: 0}
+    33.333% { opacity: 0}
+    44.444% { opacity: 0}
+    55.555% { opacity: 0}
+    66.666% { opacity: 0}
+    77.777% { opacity: 0}
+    88.888% { opacity: 1}
+    100% { opacity: 0}
+  }
+
+
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+h1 {
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  color: #333;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 1080px;
+  height: 250px;
+  overflow: hidden;
+  margin: 50px auto;
+}
+.accordion ul {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
+}
+.accordion ul li {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+  width: 16.666%;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 500ms ease;
+}
+.accordion ul li div {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+.accordion ul li div a {
+  display: block;
+  height: 250px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  vertical-align: bottom;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+  font-family: Open Sans, sans-serif;
+  transition: all 200ms ease;
+}
+.accordion ul li div a * {
+  opacity: 0;
+  margin: 0;
+  width: 100%;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 5;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+.accordion ul li div a h2 {
+  font-family: Montserrat, sans-serif;
+  text-overflow: clip;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  top: 160px;
+}
+.accordion ul li div a p {
+  top: 160px;
+  font-size: 13.5px;
+}
+.accordion ul li:nth-child(1) {
+  background-image: url("http://michael-ferry.com/assets/accordion1.jpg");
+}
+.accordion ul li:nth-child(2) {
+  background-image: url("http://michael-ferry.com/assets/accordion2.jpg");
+}
+.accordion ul li:nth-child(3) {
+  background-image: url("http://michael-ferry.com/assets/accordion3.jpg");
+}
+.accordion ul li:nth-child(4) {
+  background-image: url("http://michael-ferry.com/assets/accordion4.jpg");
+}
+.accordion ul li:nth-child(5) {
+  background-image: url("http://michael-ferry.com/assets/accordion5.jpg");
+}
+.accordion ul li:nth-child(6) {
+  background-image: url("http://michael-ferry.com/assets/accordion6.jpg");
+}
+.accordion ul:hover li, .accordion ul:focus-within li {
+  width: 8%;
+}
+.accordion ul li:focus {
+  outline: none;
+}
+.accordion ul:hover li:hover, .accordion ul:focus-within li:focus {
+  width: 60%;
+}
+.accordion ul:hover li:hover a, .accordion ul:focus-within li:focus a {
+  background: rgba(0, 0, 0, 0.4);
+}
+.accordion ul:hover li:hover a *, .accordion ul:focus-within li:focus a * {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.accordion ul:hover li {
+  width: 8% !important;
+}
+.accordion ul:hover li a * {
+  opacity: 0 !important;
+}
+.accordion ul:hover li:hover {
+  width: 60% !important;
+}
+.accordion ul:hover li:hover a {
+  background: rgba(0, 0, 0, 0.4);
+}
+.accordion ul:hover li:hover a * {
+  opacity: 1 !important;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    margin: 0;
+  }
+
+  .accordion {
+    height: auto;
+  }
+  .accordion ul li,
+  .accordion ul li:hover,
+  .accordion ul:hover li,
+  .accordion ul:hover li:hover {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+.about {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  color: #666;
+}
+.about a {
+  color: blue;
+  text-decoration: none;
+}
+.about a:hover {
+  text-decoration: underline;
+}
+
+
+.bio {
+    max-width: 600px;
+    height: 800px;
+    margin: 20px auto;
+    position: inherit;
+    padding-bottom: 30px;
+
+}
+
+/* icons spin */
