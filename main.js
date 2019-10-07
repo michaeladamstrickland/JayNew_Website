@@ -1,5 +1,6 @@
 
 
+
 var Intro = function() {
   this.$title = $('.hero__title');
   this.$subtitle = $('.hero__subtitle');
@@ -127,3 +128,26 @@ Intro.prototype = {
 }
 
 var intro = new Intro();
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "nav") {
+    x.className += " responsive";
+  } else {
+    x.className = "nav";
+  }
+}
+
+$('.carousel').carousel({
+  interval: 8000
+})
+
+$('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+})
