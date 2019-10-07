@@ -11,6 +11,7 @@
 }
 
 body {
+  min-height: 100%;
   margin: 0;
   height: 100vh;
   min-height: 500px;
@@ -66,21 +67,28 @@ a {
     height: 30px;
     border-radius: 10%;
     color: #1d1d1b;
+    text-align: center;
+    
   }
   .mastercard__part.red {
-    background-color: #e40019;
-    transform: translateX(4.1666666667px);
+    background-color: red;
+    transform: translateX(30.1666666667px);
+    color: white;
+    font-weight: 600;
+   
   }
   .mastercard__part.orange {
     will-change: transform;
-    background-color: #19ee8b;
-    transform: translateX(-4.1666666667px);
+    background-color: blue;
+    transform: translateX(-30.1666666667px);
     mix-blend-mode: color-dodge;
+    color: white;
+    font-weight: 600;
   }
 
 .titleHead {
-    font-family: 'Aguafina Script', cursive;
-    font-size: 45px;
+    /* font-family: 'Aguafina Script', cursive;
+    font-size: 45px; */
 }
 .mastercard__copy {
   overflow: hidden;
@@ -94,7 +102,8 @@ a {
   display: inline-block;
 }
 
-.header {
+.header_1 {
+  min-height: 100%;
   position: absolute;
   z-index: 10;
   top: 0;
@@ -128,12 +137,14 @@ a {
 .hero {
   position: relative;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
   letter-spacing: 0.05em;
+  margin-top: 200px;
+  margin-left: 200px;
 }
 
 .hero__cover {
@@ -549,3 +560,31 @@ h1 {
 }
 
 /* icons spin */
+@media only screen and (max-width: 600px) {
+  .header_1 {width: 100%}
+  .slider {width: 100%}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .header_1 {width: 100%}
+  .slider {width: 100%}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .header_1 {width: 100%}
+  .slider {width: 100%}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .header_1 {width: 100%}
+  .slider {width: 100%}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .header_1 {width: 100%}
+  .slider {width: 100%}
+}
