@@ -32,7 +32,7 @@ padding: 10px;
 }
 
 
-a {
+.socialMedia a {
   color: #f5f2ed;
   text-decoration: none;
 }
@@ -579,7 +579,8 @@ h1 {
   .accordion {display: none}
   .hero .hero__cover .hero__image {width: 100%}
   .hero__strap {
-    width: 100%;
+    display: block;
+    margin: 0 auto;
     float: left;
   }
   .hero__title{
