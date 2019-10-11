@@ -1,21 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name=“viewport” content=“width=device-width; initial-scale = 1.0; maximum-scale=1.0; user-scalable=no”>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Aguafina+Script&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/663a7646c9.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-  crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name=“viewport” content=“width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no”>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Aguafina+Script&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/663a7646c9.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* body {
+    margin: 0px;
+    font-family: 'segoe ui';
+  } */
+
+    .nav {
+      border-style: solid;
+      border-color: white;
+      border-width: 1px;
+      height: 50px;
+      width: 100%;
+      background-color: #4d4d4d;
+      position: relative;
+    }
+
+    .nav>.nav-header {
+      display: inline;
+    }
+
+    .nav>.nav-header>.nav-title {
+      display: inline-block;
+      font-size: 22px;
+      color: #fff;
+      padding: 10px 10px 10px 10px;
+    }
+
+    .nav>.nav-btn {
+      display: none;
+    }
+
+    .nav>.nav-links {
+      display: inline;
+      float: right;
+      font-size: 18px;
+    }
+
+    .nav>.nav-links>a {
+      display: inline-block;
+      padding: 13px 10px 13px 10px;
+      text-decoration: none;
+      color: #efefef;
+    }
+
+    .nav>.nav-links>a:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .nav>#nav-check {
+      display: none;
+    }
+
+    @media (max-width:600px) {
+      .nav>.nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+      }
+
+      .nav>.nav-btn>label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+      }
+
+      .nav>.nav-btn>label:hover,
+      .nav #nav-check:checked~.nav-btn>label {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      .nav>.nav-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+      }
+
+      .nav>.nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #333;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+      }
+
+      .nav>.nav-links>a {
+        display: block;
+        width: 100%;
+      }
+
+      .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
+      }
+
+      .nav>#nav-check:checked~.nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+      }
+    }
+  </style>
 </head>
+
 <body>
-        <div class="header_1">
+
+  <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        JayAblah
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+    <div class="nav-links">
+
+      <a href="index.html" target="_blank">Home</a>
+      <a href="contact.html" target="_blank">Contact</a>
+      <a href="gallery.html" target="_blank">Gallery</a>
+    </div>
+  </div>
+  <!-- <div class="header_1">
                 <h1 class="header__logo">
                   <a href="#">
                     <div class="mastercard">
@@ -36,30 +170,39 @@
                   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
                   </a>
-                </div>
-                
-              </div>
-              <div class="socialMedia">
-                  <h1 class="SM_title">
-                  <a class="fab fa-facebook" href="#"></a>
-                  <a class="fab fa-instagram" href="#"></a>
-                  <a class="fab fa-twitter" href="#"></a>
-                </h1>
-              </div>
-              
-              <div class="hero">
-               <div class="bio">
-                   <img src="https://cdn.pixabay.com/photo/2017/07/31/14/55/black-and-white-2558273__340.jpg" alt="head shot">
-                   <h1 class="bio_content">BIO</h1>
-                   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem fugiat laudantium odit, necessitatibus possimus inventore ut alias provident, sint quod non aut sed voluptatibus cum facilis aliquam eligendi? Molestias, consequuntur?</p>
-                   <!-- <span class="js-letters">Book a shoot</span>
-                   <span class="js-letters">with me</span>
-                   <span class="js-letters">today!</span>
-                   <h3 class="hero__subtitle">Bookings</h3>
-                  <a class="button" href="contact.html">Take Me There</a> -->
-                  </div>
-              
-                <div class="hero__strap">
+                </div> -->
+
+  <!-- </div> -->
+  <div class="socialMedia">
+    <h1 class="SM_title">
+      <a class="fab fa-facebook" href="#"></a>
+      <a class="fab fa-instagram" href="#"></a>
+      <a class="fab fa-twitter" href="#"></a>
+    </h1>
+  </div>
+
+  <div class="hero">
+    <div class="bio">
+      <img src="https://cdn.pixabay.com/photo/2017/07/31/14/55/black-and-white-2558273__340.jpg" alt="head shot">
+      <h1 class="bio_content">BIO</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem fugiat laudantium odit, necessitatibus possimus
+        inventore ut alias provident, sint quod non aut sed voluptatibus cum facilis aliquam eligendi? Molestias,
+        consequuntur?</p>
+    </div>
+      <h2 class="hero__title">
+        <span class="js-letters">Book a shoot</span>
+        <span class="js-letters">with me</span>
+        <span class="js-letters">today!</span>
+        <!-- <span class="js-letters">Bookings</span> -->
+        <!-- <a href="#" class="btn6">
+            Button 6
+          </a> -->
+      </h2>
+      <!-- <h2 class="hero__subtitle">Bookings</h2>
+      <a class="button" href="contact.html" style="padding-bottom: 20px">Take Me There</a> -->
+    </div>
+
+    <!-- <div class="hero__strap">
                   <h2 class="hero__title">
                     <span class="js-letters">Book a shoot</span>
                     <span class="js-letters">with me</span>
@@ -67,134 +210,158 @@
                   </h2>
                   <h3 class="hero__subtitle">Bookings</h3>
                   <a class="button" href="contact.html">Take Me There</a>
-                </div>
-              </div>
-            </div>
-            
-            </div>
-    <div class='slider'>
-        <div class='slide1'></div>
-        <div class='slide2'></div>
-        <div class='slide3'></div>
-        <div class='slide4'></div>
-        <div class='slide5'></div>
-        <div class='slide6'></div>
-        <div class='slide7'></div>
-        <div class='slide8'></div>
-        <div class='slide9'></div>
-        
+                </div> -->
+  </div>
+
+
+  <div class='slider' style="margin-top: 25px">
+    <div class='slide1'></div>
+    <div class='slide2'></div>
+    <div class='slide3'></div>
+    <div class='slide4'></div>
+    <div class='slide5'></div>
+    <div class='slide6'></div>
+    <div class='slide7'></div>
+    <div class='slide8'></div>
+    <div class='slide9'></div>
+
+  </div>
+  <hr>
+  <h1>My Art</h1>
+  <div class="accordion">
+    <ul>
+      <li tabindex="1">
+        <div>
+          <a>
+            <h2>Lorem Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </a>
+        </div>
+      </li>
+      <li tabindex="2">
+        <div>
+          <a>
+            <h2>Lorem Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </a>
+        </div>
+      </li>
+      <li tabindex="3">
+        <div>
+          <a>
+            <h2>Lorem Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </a>
+        </div>
+      </li>
+      <li tabindex="4">
+        <div>
+          <a>
+            <h2>Lorem Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </a>
+        </div>
+      </li>
+      <li tabindex="5">
+        <div>
+          <a>
+            <h2>Lorem Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </a>
+        </div>
+      </li>
+      <li tabindex="6">
+        <div>
+          <a>
+            <h2>Lorem Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+
+    <h1 class="heading">Image<span>Gallery</span></h1>
+
+    <div class="gallery">
+
+      <div class="gallery-item">
+        <img class="gallery-image"
+          src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&h=500&fit=crop"
+          alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer">
       </div>
-      <hr>
-      <h1>My Art</h1>
-<div class="accordion">
-  <ul>
-    <li tabindex="1">
-      <div>
-        <a href="#">
-          <h2>Lorem Ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        </a>
+
+      <div class="gallery-item">
+        <img class="gallery-image"
+          src="https://images.unsplash.com/photo-1515260268569-9271009adfdb?w=500&h=500&fit=crop"
+          alt="sunset behind San Francisco city skyline">
       </div>
-    </li>
-    <li tabindex="2">
-      <div>
-        <a href="#">
-          <h2>Lorem Ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        </a>
+
+      <div class="gallery-item">
+        <img class="gallery-image"
+          src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=500&h=500&fit=crop"
+          alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan">
       </div>
-    </li>
-    <li tabindex="3">
-      <div>
-        <a href="#">
-          <h2>Lorem Ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        </a>
+
+      <div class="gallery-item">
+        <img class="gallery-image"
+          src="https://images.unsplash.com/photo-1514041181368-bca62cceffcd?w=500&h=500&fit=crop"
+          alt="car interior from central back seat position showing driver and blurred view through windscreen of a busy road at night">
       </div>
-    </li>
-    <li tabindex="4">
-      <div>
-        <a href="#">
-          <h2>Lorem Ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        </a>
+
+      <div class="gallery-item">
+        <img class="gallery-image"
+          src="https://images.unsplash.com/photo-1445810694374-0a94739e4a03?w=500&h=500&fit=crop"
+          alt="back view of woman wearing a backpack and beanie waiting to cross the road on a busy street at night in New York City, USA">
       </div>
-    </li>
-    <li tabindex="5">
-      <div>
-        <a href="#">
-          <h2>Lorem Ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        </a>
+
+      <div class="gallery-item">
+        <img class="gallery-image"
+          src="https://images.unsplash.com/photo-1486334803289-1623f249dd1e?w=500&h=500&fit=crop"
+          alt="man wearing a black jacket, white shirt, blue jeans, and brown boots, playing a white electric guitar while sitting on an amp">
       </div>
-    </li>
-    <li tabindex="6">
-      <div>
-        <a href="#">
-          <h2>Lorem Ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        </a>
+      <div class="gallery-item">
+        <img class="gallery-image"
+          src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&h=500&fit=crop"
+          alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer">
       </div>
-    </li>
-  </ul>
-</div>
-<div class="container">
 
-	<h1 class="heading">Image<span>Gallery</span></h1>
+      <div class="gallery-item">
+        <img class="gallery-image"
+          src="https://images.unsplash.com/photo-1515260268569-9271009adfdb?w=500&h=500&fit=crop"
+          alt="sunset behind San Francisco city skyline">
+      </div>
 
-	<div class="gallery">
+      <div class="gallery-item">
+        <img class="gallery-image"
+          src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=500&h=500&fit=crop"
+          alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan">
+      </div>
 
-		<div class="gallery-item">
-			<img class="gallery-image" src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&h=500&fit=crop" alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer">
-		</div>
+      <div class="gallery-item">
+        <img class="gallery-image"
+          src="https://images.unsplash.com/photo-1514041181368-bca62cceffcd?w=500&h=500&fit=crop"
+          alt="car interior from central back seat position showing driver and blurred view through windscreen of a busy road at night">
+      </div>
 
-		<div class="gallery-item">
-			<img class="gallery-image" src="https://images.unsplash.com/photo-1515260268569-9271009adfdb?w=500&h=500&fit=crop" alt="sunset behind San Francisco city skyline">
-		</div>
+      <div class="gallery-item">
+        <img class="gallery-image"
+          src="https://images.unsplash.com/photo-1445810694374-0a94739e4a03?w=500&h=500&fit=crop"
+          alt="back view of woman wearing a backpack and beanie waiting to cross the road on a busy street at night in New York City, USA">
+      </div>
 
-		<div class="gallery-item">
-			<img class="gallery-image" src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=500&h=500&fit=crop" alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan">
-		</div>
+      <div class="gallery-item">
+        <img class="gallery-image"
+          src="https://images.unsplash.com/photo-1486334803289-1623f249dd1e?w=500&h=500&fit=crop"
+          alt="man wearing a black jacket, white shirt, blue jeans, and brown boots, playing a white electric guitar while sitting on an amp">
+      </div>
 
-		<div class="gallery-item">
-			<img class="gallery-image" src="https://images.unsplash.com/photo-1514041181368-bca62cceffcd?w=500&h=500&fit=crop" alt="car interior from central back seat position showing driver and blurred view through windscreen of a busy road at night">
-		</div>
-
-		<div class="gallery-item">
-			<img class="gallery-image" src="https://images.unsplash.com/photo-1445810694374-0a94739e4a03?w=500&h=500&fit=crop" alt="back view of woman wearing a backpack and beanie waiting to cross the road on a busy street at night in New York City, USA">
-		</div>
-
-		<div class="gallery-item">
-			<img class="gallery-image" src="https://images.unsplash.com/photo-1486334803289-1623f249dd1e?w=500&h=500&fit=crop" alt="man wearing a black jacket, white shirt, blue jeans, and brown boots, playing a white electric guitar while sitting on an amp">
     </div>
-    <div class="gallery-item">
-			<img class="gallery-image" src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&h=500&fit=crop" alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer">
-		</div>
 
-		<div class="gallery-item">
-			<img class="gallery-image" src="https://images.unsplash.com/photo-1515260268569-9271009adfdb?w=500&h=500&fit=crop" alt="sunset behind San Francisco city skyline">
-		</div>
-
-		<div class="gallery-item">
-			<img class="gallery-image" src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=500&h=500&fit=crop" alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan">
-		</div>
-
-		<div class="gallery-item">
-			<img class="gallery-image" src="https://images.unsplash.com/photo-1514041181368-bca62cceffcd?w=500&h=500&fit=crop" alt="car interior from central back seat position showing driver and blurred view through windscreen of a busy road at night">
-		</div>
-
-		<div class="gallery-item">
-			<img class="gallery-image" src="https://images.unsplash.com/photo-1445810694374-0a94739e4a03?w=500&h=500&fit=crop" alt="back view of woman wearing a backpack and beanie waiting to cross the road on a busy street at night in New York City, USA">
-		</div>
-
-		<div class="gallery-item">
-			<img class="gallery-image" src="https://images.unsplash.com/photo-1486334803289-1623f249dd1e?w=500&h=500&fit=crop" alt="man wearing a black jacket, white shirt, blue jeans, and brown boots, playing a white electric guitar while sitting on an amp">
-		</div>
-
-	</div>
-
-</div>
-<footer></footer>
+  </div>
+  <footer></footer>
 </body>
 <script src="main.js"></script>
+
 </html>
