@@ -243,14 +243,14 @@ padding: 10px;
 
 .hero {
 
-  margin: 150px auto;
+  margin: 15px auto;
   text-align: center;
   width: 100%;
   position: relative;
   
   align-items: center;
   justify-content: center;
-  height: 100%vh;
+  height: 100%;
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
   letter-spacing: 0.05em;
@@ -303,6 +303,7 @@ padding: 10px;
 .hero__title .hero__subtitle {
   display: inline-block;
 }
+
 
 
 
@@ -696,22 +697,39 @@ h1 {
     display: block;
     margin: 0 auto;
   }
+  .Header-img {
+    height: 100px;
+    width: 150px;
+  }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {
+/* Small devices (portrait tablets and large phones, 600px and up)  */
+ @media only screen and (min-width: 600px) {
   .header_1 {width: 100%}
   .slider {width: 100%}
-  .accordion {display: none}
+  .accordion {width: 100%}
   .hero .hero__cover .hero__image {width: 100%}
-} */
+  .Header-img {
+    height: 200px;
+    width: 250px;
+  }
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .header_1 {width: 100%}
   .slider {width: 100%}
   .accordion {width: 100%}
-  .hero .hero__cover .hero__image {width: 100%}
+  .hero .hero__cover .hero__image {width: 100%;}
+  .Header-img {
+    height: 600px;
+    width: 650px;
+  }
+ 
+  p{
+    width: 650px
+  }
+ 
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
